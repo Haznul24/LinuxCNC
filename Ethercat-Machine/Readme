@@ -1,0 +1,53 @@
+Linuxcnc configuration file for Ethercat Device
+
+3 Servo Drive and 1 I/O Bus
+
+Inovance Servo Drive SV630N series and Luwei servo Drive X5S
+PINVICT I/O Bus
+
+Slave 0 : SV630N
+Slave 1 : SV630N
+Slave 2 : X5S
+Slave 3 : PINVICT
+
+# LinuxCNC EtherCAT Configuration
+
+This repository contains configuration files for integrating LinuxCNC with EtherCAT devices.  
+The setup includes three servo drives and one I/O bus, configured for motion control applications.
+
+---
+
+System Overview
+
+| Device Type	| Model				| EtherCAT Slave Index 	| Description |
+|---------------|-------------------|-----------------------|--------------|
+| Servo Drive	| Inovance SV630N	| Slave 0				| Axis 1 |
+| Servo Drive	| Inovance SV630N	| Slave 1 				| Axis 2 |
+| Servo Drive	| Luwei X5S			| Slave 2 				| Axis 3 |
+| I/O Bus		| PINVICT			| Slave 3 				| Digital and Analog I/O |
+
+---
+
+## ⚙️ Features
+
+- Compatible with LinuxCNC + EtherCAT HAL integration  
+- Basic mapped PDO entries for each slave  
+- Example HAL and XML configuration files  
+- Predefined mappings for:
+  - Position, velocity, and torque loops
+  - Enable, alarm reset, and status bits
+  - Digital and analog inputs/outputs
+
+---
+
+## 🧠 Requirements
+
+- **LinuxCNC** (tested with version 2.9+)
+- **EtherCAT master** (IgH EtherCAT master)
+- **SOEM drivers** for supported servo drives
+- **Real-time kernel** (e.g., PREEMPT_RT)
+
+---
+
+## 📁 Repository Structure
+
